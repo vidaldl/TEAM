@@ -9,6 +9,8 @@ const getContacts = async (req, res, next) => {
   });
 };
 
+// Gets contacts by specific ID
+
 const getContactById = async (req, res, next) => {
  
   const contactId = req.params.id;
