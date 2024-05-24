@@ -15,6 +15,9 @@ app.set('view engine', 'ejs');
 // Set the views directory
 app.set('views', './views');
 
+// Serve static files from the public directory
+app.use(express.static('public'));
+
 // Set Access-Control-Allow-Origin header to allow requests from any origin (*)
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
