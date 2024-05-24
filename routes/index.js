@@ -1,13 +1,16 @@
 const routes = require('express').Router();
 
 // Controllers
-const nameController = require('../controllers/nameController');
+const mainController = require('../controllers/mainController');
 
+// Home route
+routes.get('/', mainController.home);
 
-
-routes.get('/', nameController.enmanuel); 
-
+// Contacts route
 routes.use('/contacts', require('./contacts'));
 
+// Dashboard route
+routes.use('/dashboard', require('./dashboard'));
 
-module.exports = routes
+// Export routes
+module.exports = routes;
