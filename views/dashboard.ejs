@@ -2,13 +2,58 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Dashboard</title>
+  <title>Main Dashboard</title>
   <!-- Link to external CSS file -->
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-  <h1>Dashboard</h1>
-  <p>Welcome to your dashboard.</p>
-  <p><a href="/">Go Back Home</a></p>
+  <header>Tracking Vending</header>
+  <nav class="menu">
+    <a href="/">Go Back Home</a>
+  </nav>
+
+  <main>
+  <h1>Registered Machines</h1>
+  <hr>
+  <h2>Items Out Of Stock</h2>
+  <table>
+    <tr>
+      <th>Vending Machine</th>
+      <th>Item Amount</th>
+    </tr>
+    <tr>
+      <td>Example Name</td>
+      <td>Example Amount</td>
+    </tr>
+  </table>
+
+  <hr>
+  
+  <h2>Maintanence Problems</h2>
+  <table>
+    <tr>
+      <th>Vending Machine</th>
+      <th>Item Amount</th>
+    </tr>
+    <tr>
+      <td>Example Name</td>
+      <td>Example Amount</td>
+    </tr>
+  </table>
+<!-- Hope to connect the table output to the database
+and have it automatically generate the table.
+Default will be either empty list or message saying
+"no machines reported" -->
+<hr>
+<h2>Sales Lost</h2>
+<p>
+  A stacked bar plot that has the number of surveys divided by 
+  the month. [note: restock periods will be different for each 
+  machine, so have another similar plot for teh vending dashboard.
+  Stacks here still items and problems]
+
+</p>
+<hr>
+</main>
 </body>
 </html>
