@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Tracking Vending</title>
+  <title>All Vending Machines</title>
   <!-- Link to external CSS file -->
   <link rel="stylesheet" href="/css/style.css">
 </head>
@@ -14,19 +14,25 @@
   <!-- Navigation bar, links to "Home" and "Login"/"Account Dashboard" -->
   <nav class="menu">
     <a href="/">Home</a>
-    <a href="/clientLogin">Log In</a>
+    <a href="/dashboard">Dashboard</a>
+    <a href="/vendingAll">All Machines</a>
+    <a href="/client">Account</a>
   </nav>
-  <h1>Vending Tracks</h1>
-  <h3>Let your users do track what you're missing</h3>
-  <hr>
+  
   <p>
-    Points to "sell" our service to potetial clients
+    <a href="/vendingAdd">Add Machine</a>
   </p>
-  <p>
-    How to get started. 
-    What information they will need about their machine.
-  </p>
-  <nav><a href="/dashboard">Go to Dashboard</a></nav>
+
+  <table>
+    <tr>
+      <th>Vending Machine</th>
+      <th>QR Download</th>
+    </tr>
+    <tr>
+      <td><a href="/views/vending">Example Name</a></td>
+      <td>download link</td>
+    </tr>
+  </table>
 
 
 </body>
