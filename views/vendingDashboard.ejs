@@ -2,16 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Main Dashboard</title>
+  <title>Vending Dashboard</title>
   <!-- Link to external CSS file -->
   <link rel="stylesheet" href="/css/style.css">
 </head>
+<!-- 
+    This dashboard will be populated depending on which
+    vending machine was chosen. Most of the base text on
+    this page will be default text in case of connection issues
+ -->
 <body>
   <!-- Header, Should be uniform between all the pages -->
   <header>
     <h1>Vending Tracks</h1>
   </header>
-  <!-- Navigation bar, links to "Home" and "Login"/"Account Dashboard" -->
+  <!-- Navigation bar, links to "Home", dashboard and "Login"/"Account Dashboard" -->
   <nav class="menu">
     <a href="/">Home</a>
     <a href="/dashboard">Dashboard</a>
@@ -21,21 +26,19 @@
 
   <!-- Content Section, this has all the main elements we want to display -->
   <main>
-  <h1>Registered Machines</h1>
-  <p>
-    Note: the links in the tables on this page do not work yet.
-  </p>
+  <h1>Machine Name</h1>
+  <a href="/vendingEdit">Edit Machine Information</a>
   <hr>
   <!-- First table, connect to the results that sum the amount of items
   out of stock for each vending machine -->
   <h2>Items Out Of Stock</h2>
   <table>
     <tr>
-      <th>Vending Machine</th>
-      <th>Item Amount</th>
+      <th>Item</th>
+      <th>Times Reported</th>
     </tr>
     <tr>
-      <td><a href="/views/vending">Example Name</a></td>
+      <td>Example Name/Number</td>
       <td>Example Amount</td>
     </tr>
   </table>
@@ -46,11 +49,11 @@
   <h2>Maintanence Problems</h2>
   <table>
     <tr>
-      <th>Vending Machine</th>
-      <th>Item Amount</th>
+      <th>Issue</th>
+      <th>Times Reported</th>
     </tr>
     <tr>
-      <td><a href="/views/vending.ejs">Example Name</a></td>
+      <td>Example Issue</td>
       <td>Example Amount</td>
     </tr>
   </table>
@@ -60,9 +63,7 @@
   <h2>Sales Lost</h2>
   <p>
     A stacked bar plot that has the number of surveys divided by 
-    the month. [note: restock periods will be different for each 
-    machine, so have another similar plot for teh vending dashboard.
-    Stacks here still items and problems]
+    since last restock. [note: Stacks here still items and problems]
   </p>
   <hr>
 </main>
