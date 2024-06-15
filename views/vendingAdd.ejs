@@ -20,9 +20,25 @@
   </nav>
   
   <p>
-    Register Vending Machine
-    <a href="vendingAll">Save</a>
-    <!-- pipes client to vending all after OR vending dashboard -->
+    Register a Vending Machine
+    
+    <form>
+      <label>Vending Machine Name:</label>
+      <input type="text" name="machinename" value="" placeholder="ex: Coca-Cola in Lobby">
+        <br><br>
+
+      <label>Location:</label>
+      <input type="text" name="machineaddress">
+        <br><br>
+
+      <label>Items: </label>
+      <input type="radio" name="machineitemtype">
+        <br><br>
+
+      <input type="submit">
+  </form>
+    <!-- pipes client to vending all after OR vending dashboard 
+     (edit pipes to vend dash if it is easier to make them pipe to the same or different locations) -->
   </p>
 
 
