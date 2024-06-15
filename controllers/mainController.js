@@ -2,7 +2,18 @@
 const home = (req, res) => {
   // Uses the Express response object 'res' to render the 'index' view
   // This will look for 'index.ejs' in the views folder if EJS is set as the view engine
-  res.render('index');
+
+  let data = {
+    authenticated: req.oidc.isAuthenticated()
+  }
+
+  if (req.oidc.isAuthenticated()) {
+    let user = req.oidc.user;
+    data['user_name'] = user.name;
+  }
+  res.render('index', { data });
+
+  
 };
 
 // Export the 'home' handler to make it available for import in other files,
