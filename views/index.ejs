@@ -12,6 +12,7 @@
   <title>Vending Tracks Home</title>
 </head>
 <body>
+
   <!-- Header, Should be uniform between all the pages -->
   <header>
     <h1>Vending Tracks</h1>
@@ -20,7 +21,11 @@
   <nav class="menu">
     <a href="/">Home</a>
     <a href="/dashboard">Dashboard</a>
-    <a href="/clientLogin">Log In</a>
+    <% if (data.authenticated) { %>
+       <a href="/logout">Log Out</a>
+    <% } else { %>
+      <a href="/login">Log In</a>
+     <% } %>
   </nav>
   <h1>Vending Tracks</h1>
   <h3>Let your users do track what you're missing</h3>
