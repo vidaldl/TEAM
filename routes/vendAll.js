@@ -1,7 +1,7 @@
 const routes = require('express').Router();
 
 // Controllers
-const mainController = require('../controllers/mainController');
+const mainController = require('../controllers/vendAllController');
 
 // Home route
 routes.get('/', mainController.home);
@@ -12,8 +12,8 @@ routes.use('/contacts', require('./contacts'));
 // Dashboard route
 routes.use('/dashboard', require('./dashboard'));
 
-// Vending All route
-routes.use('/vendingAll', require('./vendingAll'))
+// Home route
+routes.get('', vendAllController.vendAll);
 
 // Export routes
 module.exports = routes;
