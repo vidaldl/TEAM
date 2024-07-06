@@ -1,5 +1,31 @@
-/* Example Styles */
+
+.teko-overallfont {
+  font-family: "Teko", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* This is setting the font for the whole page */
+html {
+    font-size: 30px; /* px means "pixels" */
+    font-family: "Teko", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    }
+/* This is setting the page color */
+html {
+    background-color: black;
+}
+/* Creates a box around the body and fills it  */
+body {
+  max-width: 80%; /* This is the max width of the body as percentage of window width  */
+  margin: 0 auto; /* Two numbers: first affects top and bottom, second affect left and right (auto centers it) */
+  background-color: #e6e5e5;
+  padding: 0 20px 20px 20px; /* padding of elements: top, right, bottom, left */
+  border: 5px solid rgb(52, 52, 52);
+}
 
 h1 {
-    color: green;
+    color:darkred
 }
