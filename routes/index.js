@@ -17,8 +17,9 @@ routes.use('/contacts', require('./contacts'));
 // Dashboard route
 routes.use('/dashboard', requiresAuth(), require('./dashboard'));
 
-// Vending All route
-routes.use('/vendAll', requiresAuth(), require('./vendingAll'));
+// Vending routes
+routes.use('/vending', requiresAuth(), require('./vending'));
+
 
 // Export routes
 module.exports = routes;
