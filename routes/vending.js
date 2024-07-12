@@ -7,5 +7,8 @@ const vendingController = require('../controllers/vendingController');
 
 
 routes.get('/all', vendingController.vendingAll);
+routes.get('/dashboard/:id', vendingController.vendingDashboard);
+routes.get('/generateQRCode/:id', vendingController.generateQRCode);
+routes.get('/printQRCode/:id', vendingController.printQRCode);
 
 module.exports = routes;
