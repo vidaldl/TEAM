@@ -11,7 +11,7 @@
   <header>
     <h4>Vending Tracks</h4>
   </header>
-  <p><%= data %></p>
+  <p><%= userData %></p>
   <!-- Navigation bar, links to "Home" and "Login"/"Account Dashboard" -->
   <nav class="menu">
     <a href="/">Home</a>
@@ -35,10 +35,12 @@
       <th>Vending Machine</th>
       <th>Item Amount</th>
     </tr>
-    <tr>
-      <td><a href="/views/vending">Example Name</a></td>
-      <td>Example Amount</td>
-    </tr>
+    <% outOfStockSummary.forEach(item => { %>
+      <tr>
+        <td><a href="/vending/dashboard/<%= item.vendingMachine._id %>"><%= item.vendingMachine.model %></a></td>
+        <td><%= item.itemCount %></td>
+      </tr>
+    <% }) %>
   </table>
 
   <hr>
@@ -50,10 +52,12 @@
       <th>Vending Machine</th>
       <th>Item Amount</th>
     </tr>
-    <tr>
-      <td><a href="/views/vending.ejs">Example Name</a></td>
-      <td>Example Amount</td>
-    </tr>
+    <% maintenanceSummary.forEach(issue => { %>
+      <tr>
+        <td><a href="/vending/dashboard/<%= issue.vendingMachine._id %>"><%= issue.vendingMachine.model %></a></td>
+        <td><%= issue.itemCount %></td>
+      </tr>
+    <% }) %>
   </table>
   <!-- Default will be either empty list or message 
   saying "no machines reported" -->
