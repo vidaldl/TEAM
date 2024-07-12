@@ -28,44 +28,56 @@
   <main>
   <h1>Machine Name</h1>
   <a href="/vendingEdit">Edit Machine Information</a>
+  <p>Location: <%= vendingMachine.location.address %></p>
+  <p>Model: <%= vendingMachine.model %></p>
+  <p>Status: <%= vendingMachine.status %></p>
   <hr>
-  <!-- First table, connect to the results that sum the amount of items
-  out of stock for each vending machine -->
-  <h2>Items Out Of Stock</h2>
-  <table>
-    <tr>
-      <th>Item</th>
-      <th>Times Reported</th>
-    </tr>
-    <tr>
-      <td>Example Name/Number</td>
-      <td>Example Amount</td>
-    </tr>
-  </table>
+  <h2>QR Code</h2>
+  <div>
+    <img src="<%= qrCode %>" alt="QR Code">
+    <button onclick="printQRCode('<%= vendingMachine._id %>')">Print QR Code</button>
+  </div>
 
   <hr>
-  <!-- Second table, connect to the results that sum the amount of issues
-  that have been reported for each vending machine -->
-  <h2>Maintanence Problems</h2>
-  <table>
-    <tr>
-      <th>Issue</th>
-      <th>Times Reported</th>
-    </tr>
-    <tr>
-      <td>Example Issue</td>
-      <td>Example Amount</td>
-    </tr>
-  </table>
-  <!-- Default will be either empty list or message 
-  saying "no machines reported" -->
-  <hr>
-  <h2>Sales Lost</h2>
-  <p>
-    A stacked bar plot that has the number of surveys divided by 
-    since last restock. [note: Stacks here still items and problems]
-  </p>
-  <hr>
+<!-- First table, connect to the results that sum the amount of items out of stock for each vending machine -->
+<h2>Items Out Of Stock</h2>
+<table>
+  <tr>
+    <th>Item</th>
+    <th>Times Reported</th>
+  </tr>
+  <% outOfStockItems.forEach(item => { %>
+  <tr>
+    <td><%= item.name %></td>
+    <td><%= item.count %></td>
+  </tr>
+  <% }) %>
+</table>
+
+<hr>
+ <!-- Second table, connect to the results that sum the amount of issues that have been reported for each vending machine -->
+ <h2>Maintenance Problems</h2>
+ <table>
+   <tr>
+     <th>Issue</th>
+     <th>Times Reported</th>
+   </tr>
+   <% maintenanceIssues.forEach(issue => { %>
+   <tr>
+     <td><%= issue.name %></td>
+     <td><%= issue.count %></td>
+   </tr>
+   <% }) %>
+ </table>
+  </div>
+  <script>
+    function printQRCode(machineId) {
+      const printWindow = window.open(`/vending/generateQRCode/${machineId}`, 'Print QR Code', 'width=600,height=600');
+      printWindow.addEventListener('load', function() {
+        printWindow.print();
+      }, true);
+    }
+  </script>
 </main>
 </body>
 </html>
