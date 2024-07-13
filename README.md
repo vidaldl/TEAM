@@ -21,6 +21,12 @@ Wonodi, Chisom
 # Useful Websites
 
 {Make a list of websites that you found helpful in this project}
+* [CSS Syntax - GeeksforGeeks](https://www.geeksforgeeks.org/css-syntax/?ref=lbp)
+* [HTML input Tag - Geeks for Geeks](https://www.geeksforgeeks.org/html-input-tag/)
+* [HTML Tutorial – GeeksforGeeks](https://www.geeksforgeeks.org/html-tutorial/)
+* [CSS Google Fonts](https://www.w3schools.com/css/css_font_google.asp)
+* [Selection – Google Fonts](https://fonts.google.com/selection)
+* [Web Site Name](http://url.link.goes.here)
 * [Web Site Name](http://url.link.goes.here)
 * [Web Site Name](http://url.link.goes.here)
 
