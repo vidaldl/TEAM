@@ -17,6 +17,57 @@
   </nav>
   <p>
     Start Account Deletion
+
+  </p>
+
+  <p>
+    To Verrify that you want to delete your account, please make sure the following infromation is correct 
+    so that we can sucessfully remove you from our database. We would also apreciate if you would select 
+    a reason for wanting to delete your account. We thank you for your time with us and wish you the best
+    in the future.
+    <form>
+      
+      <label>Login Email:</label>
+      <input type="email" name="username" value="" placeholder="Original Email">
+        <br><br>
+
+      <label>Company Name:</label>
+      <input type="text" name="companyname" value="" placeholder="Original Company name">
+        <br><br>
+
+      <label>Prefered email:</label>
+      <input type="email" name="companyprefemail" value="Original Prefered Email">
+        <br><br>
+
+      <p>Please Select a Reason for Account Deletion</p>
+
+      <div>
+        <input type="radio" 
+                id="newcomp" 
+                name="reason" 
+                value="newcomp">
+        <label for="newcomp">Found a New Company to Track my Supply</label>
+      </div>
+  
+      <div>
+          <input type="radio" 
+                 id="selling" 
+                 name="reason" 
+                 value="selling">
+          <label for="selling">Selling my Machines</label>
+      </div>
+  
+      <div>
+          <input type="radio" 
+                 id="other" 
+                 name="reason" 
+                 value="other" >
+          <label for="other">Other</label>
+      </div>
+
+      <textarea name="text_reason" cols="50" rows="10"></textarea>
+
+      <input type="submit">
     <a href="/">Done</a>
   </p>
 </body>

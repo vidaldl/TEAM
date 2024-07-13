@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -26,14 +26,27 @@
   <table>
     <tr>
       <th>Vending Machine</th>
+      <th>Status</th>
       <th>QR Download</th>
     </tr>
+    <% vendingMachines.forEach(machine => { %>
     <tr>
-      <td><a href="/views/vending">Example Name</a></td>
-      <td>download link</td>
+      <td><a href="/vending/dashboard/<%= machine._id %>">Location: <%= machine.location.address %></a></td>
+      <td>Status: <%= machine.status %></td>
+      <td><button onclick="printQRCode('<%= machine._id %>')">Print QR Code</button></td>
     </tr>
+    <% }) %>
   </table>
 
 
 </body>
+
+<script>
+  function printQRCode(machineId) {
+      const printWindow = window.open(`/vending/generateQRCode/${machineId}`, 'Print QR Code', 'width=600,height=600');
+      printWindow.addEventListener('load', function() {
+        printWindow.print();
+      }, true);
+    }
+</script>
 </html>
