@@ -1,15 +1,5 @@
 
-<<<<<<< HEAD
-const vendingEdit = (req, res) => {
-    res.render('vendingEdit');
-}
 
-// Export the dashboard handler so it can be imported and used in other parts of the application,
-// typically where routes are defined.
-module.exports = {
-    vendingAll,
-    vendingEdit
-=======
 const QRCode = require('qrcode');
 const PDFDocument = require('pdfkit');
 const VendingMachine = require('../models/vendingMachine');
@@ -99,5 +89,5 @@ module.exports = {
   vendingDashboard,
   generateQRCode,
   printQRCode,
->>>>>>> b757f7ff826315fc83abbe52c7c269e4a5dc9a7a
+
 };
