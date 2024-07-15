@@ -10,7 +10,7 @@ Cover what verbage we use to the sake of those actually looking at the code
 
 We use VScode as our programming tool based.
 
-We use different kind of language to do this such as html,css, and json as database.
+We use different kind of language to do this such as html, css, and json as database.
 
 # Collaborators
 Akeh, Emmanuel
@@ -36,5 +36,5 @@ Wonodi, Chisom
 
 {Make a list of things that you need to fix, improve, and add in the future.}
 * Expanding Company-Client conection beyond one-to-one. This way mulitiple "clients" conected to one company.
-* Item 2
+* Editing the style to use a more unique font
 * Item 3
