@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const dotenv = require('dotenv');
 const { auth } = require('express-openid-connect');
 const connectDb = require('./db/connect');
+const checkUser = require('./middleware/checkUser');
 
 dotenv.config();
 const app = express();
@@ -30,6 +31,9 @@ const config = {
 };
 
 app.use(auth(config));
+app.use(checkUser);
+
+
 app.use('/', require('./routes'));
 
 connectDb().then(() => {
