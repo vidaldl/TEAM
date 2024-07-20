@@ -22,11 +22,11 @@ We used Mongo Database and Mongoose to store and process data.
 
 # Collaborators
 
-Akeh, Emmanuel
-Farnsworth, Elizabeth
-Hsu, Tzu Hsuan
-Vidal, Leo
-Wonodi, Chisom
+- Akeh, Emmanuel
+- Farnsworth, Elizabeth
+- Hsu, Tzu Hsuan
+- Vidal, Leo
+- Wonodi, Chisom
 
 # Useful Websites
 
