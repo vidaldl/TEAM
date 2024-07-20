@@ -30,7 +30,6 @@ Wonodi, Chisom
 
 # Useful Websites
 
-{Make a list of websites that you found helpful in this project}
 * [CSS Syntax - GeeksforGeeks](https://www.geeksforgeeks.org/css-syntax/?ref=lbp)
 * [HTML input Tag - Geeks for Geeks](https://www.geeksforgeeks.org/html-input-tag/)
 * [HTML Tutorial – GeeksforGeeks](https://www.geeksforgeeks.org/html-tutorial/)
