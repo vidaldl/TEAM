@@ -20,5 +20,8 @@ routes.use('/vending', requiresAuth(), require('./vending'));
 // Issue routes
 routes.use('/issues', require('./issue'));
 
+// Client routes
+routes.use('/client', requiresAuth(), require('./client'));
+
 // Export routes
 module.exports = routes;

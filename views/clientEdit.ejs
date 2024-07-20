@@ -16,39 +16,22 @@
     <a href="/client">Account</a>
   </nav>
   <p>
-    Account information Edit
+    Edit Client Information
 
-    <form>
-      
-      <label>Login Email:</label>
-      <input type="email" name="username" value="" placeholder="Original Email">
-        <br><br>
+    <form action="/client/edit" method="post">
+      <label for="name">Company Name:</label>
+      <input type="text" id="name" name="name" value="<%= company.name %>"><br>
 
-      <label>Password:</label>
-      <input type="password" name="password" value="" placeholder="OriginalPassword">
-        <br><br>  
+      <label for="address">Address:</label>
+      <input type="text" id="address" name="address" value="<%= company.address %>"><br>
 
-      <label>Verrify Password:</label>
-      <input type="password" name="verpassword" value="" placeholder="OriginalPassword">
-        <br><br> 
+      <label for="phone">Phone:</label>
+      <input type="text" id="phone" name="phone" value="<%= company.contact_info.phone %>"><br>
 
-      <label>Company Name:</label>
-      <input type="text" name="companyname" value="" placeholder="Original Company name">
-        <br><br>
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email" value="<%= company.contact_info.email %>"><br>
 
-      <label>Prefered email:</label>
-      <input type="email" name="companyprefemail" value="Original Prefered Email">
-        <br><br>
-
-      <label>Address:</label>
-      <input type="text" name="companyaddress" value="Original Adress, if any">
-        <br><br>
-
-      <label>Phone Number: </label>
-      <input type="radio" name="companynumber" value="Original Phone number, if any">
-        <br><br>
-
-      <input type="submit">
+      <button type="submit">Save</button>
   </form>
     <!-- saves info and pushes back to account page -->
 
