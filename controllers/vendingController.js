@@ -5,6 +5,7 @@ const PDFDocument = require('pdfkit');
 const VendingMachine = require('../models/vendingMachine');
 const Issue = require('../models/issue');
 const Company = require('../models/company');
+const User = require('../models/user');
 
 const vendingAll = async (req, res) => {
   try {
@@ -15,6 +16,8 @@ const vendingAll = async (req, res) => {
     res.status(500).send(error.message);
   }
 };
+
+
 
 const vendingDashboard = async (req, res) => {
   try {
@@ -84,10 +87,47 @@ const printQRCode = async (req, res) => {
   }
 };
 
+
+
+
+// Display the vending machine addition form
+const showAddVendingForm = async (req, res) => {
+    const user = await User.findOne({ auth0Id: req.oidc.user.sub }).populate('company');
+    if (!user) {
+        return res.status(404).send('User not found');
+    }
+    res.render('vendingAdd', { company: user.company });
+};
+
+// Handle vending machine addition form submission
+const addVendingMachine = async (req, res) => {
+    const user = await User.findOne({ auth0Id: req.oidc.user.sub }).populate('company');
+    if (!user) {
+        return res.status(404).send('User not found');
+    }
+
+    const { address, lat, long, model, status } = req.body;
+
+    const vendingMachine = new VendingMachine({
+        location: {
+            address,
+            coordinates: { lat, long }
+        },
+        model,
+        status,
+        companyId: user.company._id
+    });
+
+    await vendingMachine.save();
+    res.redirect('/dashboard');
+};
+
+
 module.exports = {
   vendingAll,
   vendingDashboard,
   generateQRCode,
   printQRCode,
-
+  showAddVendingForm,
+  addVendingMachine
 };

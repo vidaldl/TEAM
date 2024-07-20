@@ -22,20 +22,23 @@
   <p>
     Register a Vending Machine
     
-    <form>
-      <label>Vending Machine Name:</label>
-      <input type="text" name="machinename" value="" placeholder="ex: Coca-Cola in Lobby">
-        <br><br>
+    <form action="/vending/add" method="post">
+      <label for="address">Address:</label>
+      <input type="text" id="address" name="address" required><br>
 
-      <label>Location:</label>
-      <input type="text" name="machineaddress">
-        <br><br>
+      <label for="lat">Latitude:</label>
+      <input type="text" id="lat" name="lat" required><br>
 
-      <label>Items: </label>
-      <input type="radio" name="machineitemtype">
-        <br><br>
+      <label for="long">Longitude:</label>
+      <input type="text" id="long" name="long" required><br>
 
-      <input type="submit">
+      <label for="model">Model:</label>
+      <input type="text" id="model" name="model" required><br>
+
+      <label for="status">Status:</label>
+      <input type="text" id="status" name="status" required><br>
+
+      <button type="submit">Add Vending Machine</button>
   </form>
     <!-- pipes client to vending all after OR vending dashboard 
      (edit pipes to vend dash if it is easier to make them pipe to the same or different locations) -->
